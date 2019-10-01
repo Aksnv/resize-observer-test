@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-	var container = document.querySelector(".container");
-	var wrapper = document.querySelector(".wrapper");
-	var wrapperWidth = wrapper.offsetWidth;
+var container = document.querySelector(".container");
+var wrapper = document.querySelector(".wrapper");
+var wrapperWidth = wrapper.offsetWidth;
 
+document.addEventListener("DOMContentLoaded", function() {
 	if (wrapperWidth < 1024) {
 		wrapper.classList.remove("md");
 		wrapper.classList.add("sm");
@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
-/*window.addEventListener("resize", function() {
+window.addEventListener("resize", function() {
+	wrapperWidth = wrapper.offsetWidth;
 	if (wrapperWidth < 1024) {
 		wrapper.classList.remove("md");
 		wrapper.classList.add("sm");
@@ -20,4 +21,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		wrapper.classList.remove("sm");
 		wrapper.classList.add("md");
 	}
-});*/
+});
